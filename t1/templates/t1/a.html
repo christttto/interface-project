@@ -11,34 +11,7 @@
 
 	<script src="{% static '/vendors/jquery/jquery-3.3.1.min.js' %}"></script>
 	<script src="{% static '/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
-  <script>
-    /*
-    1) Clicking on a purple bubble hides all purple bubbles
-    2) Clicking on a green bubble hides all bubbles that are green OR blue
-    3) Clicking on an orange bordered bubble hides all bubbles that are bordered AND orange
-    4) Hovering over the gradient bubble hides the gradient bubble
-    
-    */
-    $(document).ready(function(){
-      $(".bg-purple").click(function(){
-        $(".bg-purple").hide();
-      })
-      $(".bg-green").click(function(){
-        $(".bg-green").hide();
-        $(".bg-blue").hide();
-      })
-      $(".bg-orange.p2-border").click(function(){
-        $(".bg-orange.p2-border").hide();
-      })
-      $("#gradient-circle").mouseover(function(){
-        $("#gradient-circle").hide();
-      })
-      $(".btn").click(function(){
-        $(".p2-circle").show();
-      })
-    });
-    
-  </script>
+
 </head>
 
 <body>
@@ -91,7 +64,31 @@
 
 <script type="text/javascript">
 	// your solution here
+  /*
+  1) Clicking on a purple bubble hides all purple bubbles
+  2) Clicking on a green bubble hides all bubbles that are green OR blue
+  3) Clicking on an orange bordered bubble hides all bubbles that are bordered AND orange
+  4) Hovering over the gradient bubble hides the gradient bubble
 
+  */
+  $(document).ready(function(){
+    $(".bg-purple").click(function(){
+      $(".bg-purple").hide();
+    })
+    $(".bg-green").click(function(){
+      $(".bg-green").hide();
+      $(".bg-blue").hide();
+    })
+    $(".bg-orange.p2-border").click(function(){
+      $(".bg-orange.p2-border").hide();
+    })
+    $("#gradient-circle").mouseover(function(){
+      $("#gradient-circle").hide();
+    })
+    $(".btn").click(function(){
+      $(".p2-circle").show();
+    })
+  });   
 </script>
 </body>
 </html>

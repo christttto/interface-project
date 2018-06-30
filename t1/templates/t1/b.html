@@ -11,7 +11,14 @@
 
 	<script src="{% static '/vendors/jquery/jquery-3.3.1.min.js' %}"></script>
 	<script src="{% static '/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
-
+  <script>
+    /*Create a stop button on the screen (or use the one provided). 
+    Add a new bubble to the bubble container every 1 seconds. 
+    Continue to add bubbles until the user clicks the stop button.*/
+    $(document).ready(function(){
+      $(".btn").click(looper = false;
+    });
+  </script>
 </head>
 
 <body>
@@ -39,9 +46,10 @@
 
 
 <script type="text/javascript">
-
 	// your solution here
-
+  var newCircle = "<div class="p2-circle bg-blue"></div>";
+  $(".shape-container").append(newCircle);
+  
 </script>
 </body>
 </html>
