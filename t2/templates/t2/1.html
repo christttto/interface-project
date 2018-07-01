@@ -8,13 +8,29 @@
 	<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}" />
 	<script src="{% static '/vendors/jquery/jquery-3.3.1.min.js' %}"></script>
 	<script src="{% static '/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
-  <style type="text/css">
-    .image-fill {
-      
+  <style>
+    #linker{width:100px; height:100px; border:1px solid orange; background:lightblue;}
+    body {
+    /* The image used */
+    background-image: url("/static/t2/IMG_6383.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
     }
   </style>
 </head>
 <body>
-  <img class="image-fill" src="/static/t2/IMG_6383.png">
+  <div id="linker"></div>
+  <script>
+    $("#linker").click(function(e){
+      var pHeight = $(this).outerHeight(); //use .outerWidth() if you want borders
+      var pOffset = $(this).offset(); 
+      var x = e.pageY - pOffset.top;
+      if(pHeight/2 > x)
+        $(this).text('top');
+      else
+        $(this).text('bottom');
+    });
+  </script>
 </body>
 </html>
