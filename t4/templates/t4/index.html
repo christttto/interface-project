@@ -51,6 +51,15 @@
 		.action-complete {
 			background: #ffffff;
 		}
+		#rotate-box{}
+		#pinch-box{}
+		#press-box{}
+		#pan-box{}
+		#tap-box{}
+		#swipe-box{}
+		.violet{
+			background-color:violet;
+		}
 	</style>
 
 </head>
@@ -85,6 +94,47 @@
 	</div>
 	<script>
 	  // your solution here
+		
+		var myRotate = document.getElementById('rotate-box');
+		var hammerRotate = new Hammer(myRotate);
+		hammerRotate.get('rotate').set({enable:true});
+		hammerRotate.on("rotate", function(ev){
+			$("#rotate-box").addClass("violet");
+		});
+		
+		var myPinch = document.getElementById('pinch-box');
+		var hammerPinch = new Hammer(myPinch);
+		hammerPinch.get('pinch').set({enable:true});
+		hammerPinch.on("pinch", function(ev){
+			$("#pinch-box").addClass("violet");
+		});
+		
+		var myPress = document.getElementById('press-box');
+		var hammerPress = new Hammer(myPress);
+		hammerPress.on("press", function(ev){
+			$("#press-box").addClass("violet");
+		});
+		
+		var myPan = document.getElementById('pan-box');
+		var hammerPan = new Hammer(myPan);
+		hammerPan.get('pan').set({direction:Hammer.DIRECTION_ALL});
+		hammerPan.on("pan", function(ev){
+			$("#pan-box").addClass("violet");
+		});
+		
+		var myTap = document.getElementById('tap-box');
+		var hammerTap = new Hammer(myTap);
+		hammerTap.on("tap", function(ev){
+			$("#tap-box").addClass("violet");
+		});
+		
+		var mySwipe = document.getElementById('swipe-box');
+		var hammerSwipe = new Hammer(mySwipe);
+		hammerSwipe.get('swipe').set({direction:Hammer.DIRECTION_ALL});
+		hammerSwipe.on("swipe", function(ev){
+			$("#swipe-box").addClass("violet");
+		});
+			
   </script>
 </body>
 </html>
