@@ -13,8 +13,88 @@
 		<script src="{% static '/vendors/jquery/jquery-3.3.1.min.js' %}"></script>
 		<script src="{% static '/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
 	</head>
-	<body>
+	<body class>
 		<!-- Your layout here -->
+		<style>
+			html,body{
+				margin: 0;
+				padding:0;
+				height: 100%;
+			}
+			.filler{
+				min-height:100%;
+			}
+			.red{
+				background-color:red;
+			}
+			.blue{
+				background-color:blue;
+			}
+			.violet{
+				background-color:violet;
+			}
+			.black{
+				background-color:black;
+			}
+			.mintcream{
+				background-color:mintcream;
+			}
+			.skyblue{
+				background-color:skyblue;
+			}
+			.filler{
+				height:100vh;
+				overflow:auto;
+			}
+		</style>
+		<div class="container-fluid ">
+			<div class="row ">
+				<div class="col red filler">asdf</div>
+				<div class="col blue"></div>
+			</div>
+			<div class="row">
+				<div class="col violet filler">asdf</div>
+				<div class="col black"></div>
+			</div>
+			<div class="row">
+				<div class="col mintcream filler">asdf</div>
+				<div class="col skyblue"></div>
+			</div>
+			
+		</div>
 
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
