@@ -28,6 +28,18 @@
 			background: grey;
 			padding: 5px;
 		}
+		.red-hover {
+			background: red;
+		}
+		.blue-hover {
+			background: blue;
+		}
+		.red-drop {
+			background: darkred;
+		}
+		.blue-drop {
+			background: darkblue;
+		}
 
 	</style>
 
@@ -45,11 +57,11 @@
 						</div>
 					</div>
 
-					<div id="drop-box-2" class="large-box">
+					<div id="drop-box-1" class="large-box">
 					  <p>Drop here</p>
 					</div>
 					 
-					<div id="drop-box-1" class="large-box">
+					<div id="drop-box-2" class="large-box">
 					  <p>Drop here</p>
 					</div>
 				</div>
@@ -58,6 +70,86 @@
 	</div>
   <script>
 	  // your solution here
-  </script>
+		/*
+		$("#drag-box").draggable();
+  	*/
+		$( function() {
+			$( "#drag-box" ).draggable({
+				revert: 'invalid'
+			});
+			$( "#drop-box-1" ).droppable({
+				accept: "#drag-box",
+				over: function(event, ui){
+					$("#drag-box").addClass("red-hover");
+				},
+				out: function(event, ui){
+					$("#drag-box").removeClass("red-hover");
+				},
+				drop: function( event, ui ) {
+					$( this )
+						.addClass( "ui-state-highlight" )
+						.find( "p" )
+							.html( "Dropped!" );
+					$("#drag-box").removeClass("red-hover");					
+					$("#drag-box").addClass("red-drop");
+				}
+			});
+			$( "#drop-box-2" ).droppable({
+				accept: "#drag-box",
+				over: function(event, ui){
+					$("#drag-box").addClass("blue-hover");
+				},
+				out: function(event, ui){
+					$("#drag-box").removeClass("blue-hover");
+				},
+				drop: function( event, ui ) {
+					$( this )
+						.addClass( "ui-state-highlight" )
+						.find( "p" )
+							.html( "Dropped!" );
+					$("#drag-box").removeClass("blue-hover");					
+					$("#drag-box").addClass("blue-drop");
+				}
+			});
+		} );
+	</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
