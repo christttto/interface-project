@@ -13,8 +13,97 @@
 		<script src="{% static '/vendors/jquery/jquery-3.3.1.min.js' %}"></script>
 		<script src="{% static '/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
 	</head>
-	<body>
+	<body class>
 		<!-- Your layout here -->
+		<style>
+			html,body{
+				margin: 0;
+				padding:0;
+				height: 100%;
+			}
+			.filler{
+				min-height:100%;
+			}
+			.red{
+				background-color:red;
+			}
+			.blue{
+				background-color:blue;
+			}
+			.violet{
+				background-color:violet;
+			}
+			.black{
+				background-color:black;
+			}
+			.pink{
+				background-color:pink;
+			}
+			.skyblue{
+				background-color:skyblue;
+			}
+			.filler{
+				height:100vh;
+				overflow:auto;
+			}
+			.wrapper{
+				display:grid;
+				grid-template-columns: 1fr;
+			}
+			.box1{
+				
+			}
+			.box2{
+				grid-row-start: span 5;
+			}
+			.box3{
+				grid-row-start: span 2;
+				padding: 1em;
+			}
+			.box4{
+				height:3em;
+			}
+		</style>
+		<div class="wrapper filler">
+			<div class="box1 red"></div>
+			<div class="box2 violet"></div>
+			<div class="box3 blue">
+				<div class="box4 black"></div>
+			</div>
+		</div>
 
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
