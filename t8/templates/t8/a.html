@@ -15,6 +15,35 @@
 	</head>
 	<body>
 		<!-- Your layout here -->
-
+		<style>
+			html,body{
+				margin:0;
+				padding:0;
+			}
+			.inner{
+				background-color:beige;
+				flex-grow:1;
+				margin:10px;
+				height:100vh;
+			}
+			.outer{
+				background-color:skyblue;
+			}
+			.box{
+				display:flex;
+				justify-content:space-around;
+			}
+		</style>
+		<div class="outer box">
+			<div class="inner"></div>
+			<div class="inner"></div>
+			<div class="inner"></div>
+			<div class="inner"></div>
+			
+			<div class="inner"></div>
+			<div class="inner"></div>
+			<div class="inner"></div>
+			<div class="inner"></div>
+		</div>
 	</body>
 </html>
